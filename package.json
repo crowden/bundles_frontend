@@ -1,7 +1,7 @@
 {
   "name": "j29-jlibrary",
   "version": "1.0.0",
-  "description": "Boilerplate for frontend apps",
+  "description": "Boilerplate for frontend apps - test change",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
