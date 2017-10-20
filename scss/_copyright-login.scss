@@ -1,12 +1,9 @@
 .copyright {
-    background: $light-green;
     position: relative;
     padding: 10px 0;
 
     .heading {
         text-align: center;
-        color: $blue;
-        @include font-times;
         font-weight: lighter;
     }
 
@@ -21,22 +18,17 @@
         }
     }
 
-    .admin-home {
-        right: 3em;
-
+    .admin-home,
+    .log-in-out.login {
         &:link, &:visited, &:hover, &:active {
             color: $default-primary-color;
         }
     }
 
+    .admin-home { right: 3em; }
+
     .log-in-out {
         right: 1em;
-
-        &.login {
-            &:link, &:visited, &:hover, &:active {
-                color: $blue;
-            }
-        }
 
         &.logout {
             &:link, &:visited, &:hover, &:active {
