@@ -5,13 +5,14 @@
 /*------------ globals ------------*/
 @charset "UTF-8";
 
-@import 'reset';
-@import 'colors';
-@import 'variables';
-@import 'mixins';
-@import 'dimensions';
-@import 'typography';
-@import 'globals';
+@import 'general/reset';
+@import 'general/colors';
+@import 'general/variables';
+@import 'general/mixins';
+@import 'general/dimensions';
+@import 'general/typography';
+@import 'general/globals';
 
-/*------------ copyright/login ------------*/
-@import 'copyright-login';
+/*------------ components ------------*/
+@import 'components/footer-copyright-login';
+@import 'components/form-login';
