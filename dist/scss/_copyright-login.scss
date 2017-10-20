@@ -1,0 +1,47 @@
+.copyright {
+    background: $light-green;
+    position: relative;
+    padding: 10px 0;
+
+    .heading {
+        text-align: center;
+        color: $blue;
+        @include font-times;
+        font-weight: lighter;
+    }
+
+    .admin-home,
+    .log-in-out {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .fa {
+            font-size: 1.5em;
+        }
+    }
+
+    .admin-home {
+        right: 3em;
+
+        &:link, &:visited, &:hover, &:active {
+            color: $default-primary-color;
+        }
+    }
+
+    .log-in-out {
+        right: 1em;
+
+        &.login {
+            &:link, &:visited, &:hover, &:active {
+                color: $blue;
+            }
+        }
+
+        &.logout {
+            &:link, &:visited, &:hover, &:active {
+                color: green;
+            }
+        }
+    }
+}
