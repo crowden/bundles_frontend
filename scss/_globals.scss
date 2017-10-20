@@ -1,0 +1,29 @@
+html,
+body {
+    min-height: 100%;
+    font-weight: 400;
+    color: $gray25;
+}
+
+body {    
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+a { color: $default-primary-color; }
+
+button {
+    padding:0; 
+    margin:0;
+    border:0;
+    background-color:transparent;
+}
+
+.hide-on-mobile {
+    display: none;
+}

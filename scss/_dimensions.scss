@@ -1,0 +1,32 @@
+.container {
+    max-width: 1400px;
+    padding-left: 1em;
+    padding-right: 1em;
+    @include center;
+}
+
+$width-33: 33.33333%;
+$width-66: 66.66667%;
+
+.basis05 {@include basis(05%);}
+.basis10 {@include basis(10%);}
+.basis15 {@include basis(15%);}
+.basis20 {@include basis(20%);}
+.basis25 {@include basis(25%);}
+.basis30 {@include basis(30%);}
+.basis33 {@include basis($width-33);}
+.basis35 {@include basis(35%);}
+.basis40 {@include basis(40%);}
+.basis45 {@include basis(45%);}
+.basis50 {@include basis(50%);}
+.basis55 {@include basis(55%);}
+.basis60 {@include basis(60%);}
+.basis65 {@include basis(65%);}
+.basis66 {@include basis($width-66);}
+.basis70 {@include basis(70%);}
+.basis75 {@include basis(75%);}
+.basis80 {@include basis(80%);}
+.basis85 {@include basis(85%);}
+.basis90 {@include basis(90%);}
+.basis95 {@include basis(95%);}
+.basis100 {@include basis(100%);}
