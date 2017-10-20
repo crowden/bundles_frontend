@@ -1,10 +1,6 @@
-// percentages
-////////////////////////////
 $width-33: 33.33333%;
 $width-66: 66.66667%;
 
-//media query breakpoints
-////////////////////////////
 $responsive-3: ' screen and (min-width: 360px)';
 $responsive-4: ' screen and (min-width: 440px)';
 $responsive-5: 'screen and (min-width: 560px)';
@@ -16,6 +12,5 @@ $responsive-11: ' screen and (min-width: 1100px)';
 $responsive-12: ' screen and (min-width: 1200px)';
 $responsive-13: ' screen and (min-width: 1300px)';
 
-// component globals
-////////////////////////////
-$default-anchor-color: $default-primary-color;
+$default-body-font: sans-serif;
+$default-heading-font: serif;
