@@ -1,0 +1,84 @@
+/*------------ flexbox ------------*/
+@mixin flex {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;-ms-flex-pack: start;justify-content: flex-start;
+}
+
+@mixin basis ($basis:null){
+    flex-basis: $basis;
+}
+
+/*------------ media queries ------------*/
+
+@mixin query($media) {
+    @media #{$media} {
+        @content;
+    }
+}
+
+/*------------ misc ------------*/
+
+@mixin dotted-underline($color) {
+    -webkit-text-decoration-style: dotted;
+    text-decoration-style: dotted;
+    -webkit-text-decoration-color: $color;
+    text-decoration-color: $color;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+}
+
+@mixin transition-1($property1, $property2: null) {
+    @if $property2 != null {
+        -moz-transition: $property1 .35s ease-in-out, $property2 .35s ease-in-out;
+        -ms-transition: $property1 .35s ease-in-out, $property2 .35s ease-in-out;
+        -o-transition: $property1 .35s ease-in-out, $property2 .35s ease-in-out;
+        -webkit-transition: $property1 .35s ease-in-out, $property2 .35s ease-in-out;
+        transition: $property1 .35s ease-in-out, $property2 .35s ease-in-out;
+    } @else {
+        -moz-transition: $property1 .35s ease-in-out;
+        -ms-transition: $property1 .35s ease-in-out;
+        -o-transition: $property1 .35s ease-in-out;
+        -webkit-transition: $property1 .35s ease-in-out;
+        transition: $property1 .35s ease-in-out;
+    }
+}
+
+@mixin transition-2($property1, $property2: null) {
+    @if $property2 != null {
+        -moz-transition: $property1 .7s ease-in-out, $property2 .7s ease-in-out;
+        -ms-transition: $property1 .7s ease-in-out, $property2 .7s ease-in-out;
+        -o-transition: $property1 .7s ease-in-out, $property2 .7s ease-in-out;
+        -webkit-transition: $property1 .7s ease-in-out, $property2 .7s ease-in-out;
+        transition: $property1 .7s ease-in-out, $property2 .7s ease-in-out;
+    } @else {
+        -moz-transition: $property1 .7s ease-in-out;
+        -ms-transition: $property1 .7s ease-in-out;
+        -o-transition: $property1 .7s ease-in-out;
+        -webkit-transition: $property1 .7s ease-in-out;
+        transition: $property1 .7s ease-in-out;     
+    }
+}
+
+@mixin center {margin: 0 auto;}
+
+@mixin gradient($start, $finish, $degree, $mid: null) {
+    @if $mid != null {
+        background: $start;
+        background: -moz-linear-gradient($degree,  $start 0%, $mid 50%, $finish 100%);
+        background: -webkit-linear-gradient($degree,  $start 0%, $mid 50%, $finish 100%);
+        background: linear-gradient($degree,  $start 0%, $mid 50%, $finish 100%);
+    } @else {
+        background: $start;
+        background: -moz-linear-gradient($degree,  $start 0%, $finish 100%);
+        background: -webkit-linear-gradient($degree,  $start 0%, $finish 100%);
+        background: linear-gradient($degree,  $start 0%, $finish 100%);
+    }
+}
