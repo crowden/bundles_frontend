@@ -1,0 +1,28 @@
+.admin.page-cms-homepage { @include flex; }
+
+.cms-widgets{
+    background: rgba(black, .75);
+
+    .cms-widget .heading {
+        color: rgb(255, 255, 255);
+    }
+
+    .cms-widget .section-heading,
+    .cms-widget .section-subheading,
+    #embed-api-auth-container {
+        color: $gray90;
+        color: rgba(black, 0.9);
+    }
+
+    .cms-widget {
+        .cms-element {
+            &:nth-child(even){
+                background: rgba(black, .15);
+            }
+
+            .btn-success {
+                color: rgba(black, .9);
+            }
+        }
+    }
+}
