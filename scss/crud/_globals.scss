@@ -90,6 +90,8 @@
     }
 
     &-action {
+        .container { margin-bottom: 2em; }
+
         form.form-action {
             @include center;
             
