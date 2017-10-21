@@ -1,0 +1,53 @@
+.ga-widget {
+    padding: 2em;
+
+    .heading {
+        font-family: $default-body-font;
+        font-size: 18px;
+        width: auto;
+        background: rgba($default-primary-color, .1);
+        border-radius: 12px;
+        border: 1px solid rgba(black, .15);
+        padding: 15px;
+        display: inline-block;
+
+    }
+
+    &-sm {
+        margin-bottom: 2em;
+    }
+
+    .view-selectors{
+        &-lg, &-sm {table {margin-bottom: .5em;}}
+
+        &-lg {
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            
+            table {
+                float: right;
+                clear: right;
+            }
+        }
+
+        &-sm {
+            margin-bottom: 2em;
+        }
+    }
+
+    .ga-chart-sm,
+    .ga-chart-lg {
+        font-size: 13px;
+    }
+
+    .ga-chart-sm {
+        padding: 2em;
+        border: 1px solid rgba(black, .15);
+        border-radius: 12px;
+        box-shadow: 0 0 7px rgba(black, .15);
+    }
+}

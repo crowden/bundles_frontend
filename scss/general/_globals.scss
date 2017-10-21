@@ -31,3 +31,6 @@ button {
 .hide-on-mobile {
     display: none;
 }
+
+/*------------ pages ------------*/
+.admin.page-cms-homepage { @include flex; }
