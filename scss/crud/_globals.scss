@@ -241,6 +241,30 @@
                     }
                 }
 
+                /*------------ form [fieldsets] ------------*/
+                fieldset {
+                    border-radius: 12px;
+                    padding: 4.5em 2em 2em;
+                    margin-top: 3.5em;
+                    background: rgb(255, 255, 255);
+                    border: 1px solid $gray70;
+                    position: relative;
+
+                    legend {
+                        display: block;
+                        position: absolute;
+                        width: auto;
+                        font-size: 1.4em;
+                        padding: 1em 2em;
+                        top: 0;
+                        left: 2em;
+                        transform: translateY(-50%);
+                        background: $gray50;
+                        color: rgb(255, 255, 255);
+                        border-radius: 12px;
+                    }
+                }
+
                 /*------------ form [sublabels] ------------*/
                 .sublabel {
                     margin-top: 1em;
@@ -283,6 +307,31 @@
                     -moz-box-shadow: none;
                     box-shadow: none;
                 }
+            }
+
+            /*------------ form [submit/cancel] ------------*/
+            .form-submission-controls {
+                text-align: center;
+
+                .btn {
+                    margin: 0 2px;
+                    display: inline-block;
+                    width: 45%
+                }
+            }
+        }
+
+        form.form-delete {
+            width: 320px;
+            padding: 1em;
+            border: 1px solid rgba(255,0,0,.5);
+            background: rgba(red, .1);
+            margin: 0 auto 4em 0;
+            border-radius: 12px;
+            text-align: center;
+
+            .btn {
+                margin: 0;
             }
         }
     }
