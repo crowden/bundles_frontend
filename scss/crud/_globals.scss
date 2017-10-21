@@ -1,0 +1,19 @@
+.admin.page-crud {
+    &-index,
+    &-action {
+        /*------------ page titles ------------*/
+        .page-title {
+            margin: 1em auto;
+            font-size: 3.6em;
+        }
+
+        /*------------ flashbags ------------*/
+        .alert.alert-success,
+        .alert.alert-warning,
+        .alert.alert-danger {
+            font-size: 1.8em;
+            max-width: 960px;
+            margin: 3em auto;
+        }
+    }
+}
