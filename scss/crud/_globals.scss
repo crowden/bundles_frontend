@@ -88,4 +88,201 @@
             }
         }
     }
+
+    &-action {
+        form.form-action {
+            @include center;
+            
+            /*------------ form [sizes] ------------*/
+            &.small {max-width: 767px;}
+            &.medium {max-width: 960px;}
+            &.large {max-width: 1200px;}
+
+            .form-controls {
+                padding: 4em;
+                border: 1px solid $gray70;
+                background: $gray90;
+                margin: 2em auto;
+
+                // Rows with multiple inputs
+                .flex {
+                    @include flex;
+                    .form-row {padding: 5px;}
+                }
+
+                // bottom margin for rows and fieldsets
+                .form-row, fieldset {
+                    margin-bottom: 2.5em;
+                    &:last-child {margin-bottom: 0;}
+                }
+
+                /*------------ form [rows] ------------*/
+                .form-row {
+                    // ROW [label]
+                    label {
+                        display: block;
+                        font-size: 1.8em;
+                        font-weight: 700;
+                        margin-bottom: .5em;
+
+                        // asterisk
+                        &.required:before {
+                            content: "*";
+                            font-size: 1.2em;
+                            color: red;
+                            margin-right: .1em;
+                            line-height: 1em;
+                            display: inline;
+                            vertical-align: top;
+                        }
+
+                        // inline label
+                        &.inline {
+                            display: inline;
+                            width: auto;
+                            height: auto;
+                            margin-right: 1em;
+                        }
+                    }
+
+                    // ROW [checkbox-inline]
+                    input[type="checkbox"].inline {
+                        box-shadow: none;
+                        display: inline;
+                        width: auto;
+                        height: auto;
+                        margin-top: 0;
+                    }
+
+                    // ROW [checkbox-collection]
+                    &.checkbox-collection {
+                        @include flex;
+
+                        .pod {
+                            padding: 1em;
+
+                            input[type="checkbox"] {
+                                display: inline;
+                                width: auto;
+                                height: auto;
+                                margin-top: 0;
+                            }
+
+                            .label {
+                                color: $gray30;
+                                font-size: 1.5em;
+                                padding: 0;
+                                margin-left: .5em;
+                            }
+                        }
+                    }
+
+                    // ROW [date-picker]
+                    &.date-picker {
+                        @include flex;
+                        
+                        .pod {
+                            padding: 5px;
+
+                            select {
+                                display: block;
+                                width: 100%;
+                                height: 34px;
+                                padding: 6px 12px;
+                                font-size: 14px;
+                                line-height: 1.428571429;
+                                color: #555555;
+                                background-color: #fff;
+                                background-image: none;
+                                border: 1px solid #ccc;
+                                border-radius: 4px;
+                                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                                -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+                                -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+                                transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+                            }
+                        }
+                    }
+
+                    // ROW [image]
+                    &.image-row {
+                        @include flex;
+
+                        .pod {padding: 5px;}
+
+                        img {
+                            width: 100%;
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                    
+                    // ROW [error]
+                    .field-error-container {
+                        ul {
+                            padding: 1em;
+                            margin: 1em auto;
+                            background: rgba(red, .1);
+                            border: 1px solid red;
+                            border-radius: 12px;
+                            font-size: 12px;
+                            display: inline-block;
+                            width: auto;
+
+                            li:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            * {
+                                color: red;
+                            }
+                        }
+                    }
+                }
+
+                /*------------ form [sublabels] ------------*/
+                .sublabel {
+                    margin-top: 1em;
+                    font-size: 1.6em;
+                    line-height: 1.5em;
+                    background: rgba(green, .15);
+                    border: 1px solid rgba(green, .1);
+                    padding: 1em;
+                    border-radius: 5px;
+                    -webkit-box-shadow: 0 8px 18px -12px rgba(0, 0, 0, 1);
+                    -moz-box-shadow: 0 8px 18px -12px rgba(0, 0, 0, 1);
+                    box-shadow: 0 8px 18px -12px rgba(0, 0, 0, 1);
+
+                    &.caution {}
+                    &.danger {}
+
+                    & .example {
+                        display: inline-block;
+                        padding: .2em .4em;
+                        margin-bottom: .2em;
+                        border: 1px solid $gray70;
+                        background: rgba(green, .5);
+                        color: white;
+                        border-radius: 5px;
+                    }
+
+                    a { text-decoration: underline; }
+                }
+
+                /*------------ form [sublabels section header] ------------*/
+                .sublabel.section-header {
+                    margin: 0 auto 2em auto;
+                    border-left: 2px solid $gray50;
+                    border-right: 2px solid $gray50;
+                    border-bottom: none;
+                    padding: 1em 2em;
+                    background: transparent;
+                    -webkit-box-shadow: none;
+                    -moz-box-shadow: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
 }
