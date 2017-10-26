@@ -18,6 +18,10 @@
     }
 
     &-index {
+        .additional-admin-links {
+            @include clearfix;
+        }
+
         .table-container {
             margin: 4em auto;
 

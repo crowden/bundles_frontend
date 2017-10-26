@@ -32,5 +32,8 @@ button {
     display: none;
 }
 
+.float-left {float: left;}
+.float-right {float: right;}
+
 /*------------ pages ------------*/
 .admin.page-cms-homepage { @include flex; }
