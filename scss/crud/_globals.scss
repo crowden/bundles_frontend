@@ -207,7 +207,8 @@
                         }
                     }
 
-                    // ROW [image]
+                    // ROW [image/document]
+                    &.document-row,
                     &.image-row {
                         @include flex;
 
