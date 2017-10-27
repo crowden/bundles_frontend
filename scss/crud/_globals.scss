@@ -22,8 +22,17 @@
             @include clearfix;
 
             .sorting {
-                li:last-child{
-                    margin-bottom: 0;
+                .dropdown-menu {
+                    &, & li {padding: 0}
+
+                    li {margin: 0}
+                    a {
+                        padding: 12px;
+
+                        &:nth-child(odd){
+                            background: rgba($default-primary-color, .1);
+                        }
+                    }
                 }
             }
         }
