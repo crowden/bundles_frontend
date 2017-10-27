@@ -20,6 +20,12 @@
     &-index {
         .additional-admin-links {
             @include clearfix;
+
+            .sorting {
+                li:last-child{
+                    margin-bottom: 0;
+                }
+            }
         }
 
         .table-container {
