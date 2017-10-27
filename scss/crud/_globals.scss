@@ -25,10 +25,7 @@
                 .dropdown-menu {
                     &, & li {padding: 0}
 
-                    li {
-                        margin: 0;
-                        &:nth-child(odd){background: rgba($default-primary-color, .1);}
-                    }
+                    li {margin: 0;}
                     
                     a {padding: 12px;}
                 }
