@@ -283,6 +283,10 @@
                 }
 
                 /*------------ form [sublabels] ------------*/
+                div.sublabel, p.sublabel {
+                    margin: 1.25em auto;
+                }
+
                 .sublabel {
                     margin-top: 1em;
                     font-size: 1.6em;
@@ -312,6 +316,10 @@
                     a { text-decoration: underline; }
                 }
 
+                div.sublabel p {
+                    font-size: 1em;
+                }
+
                 /*------------ form [sublabels section header] ------------*/
                 .sublabel.section-header {
                     margin: 0 auto 2em auto;
@@ -337,6 +345,16 @@
                     width: 45%
                 }
             }
+
+            .popovers-container {
+                .single-popover {
+                    margin-bottom: .5em;
+                    
+                    button {
+                        width: 200px;
+                    }
+                }
+            }
         }
 
         form.form-delete {
@@ -350,6 +368,31 @@
 
             .btn {
                 margin: 0;
+            }
+        }
+    }
+}
+
+#popover-trigger-click-root-close {
+    max-width: 640px;
+    
+    .popover-content {
+        .md-help-popover-explanation {
+            margin-bottom: 1em;
+        }
+
+        .md-help-popover-example {
+            margin-bottom: 0;
+            padding: 1em;
+            border-radius: 3px;
+            border: 2px dotted rgba(black, .33);
+
+            .highlight {
+                background: yellow;
+                border: 1px solid rgba(black, .33);
+                border-radius: 3px;
+                display: inline-block;
+                padding: 3px;
             }
         }
     }
