@@ -10,7 +10,8 @@
         /*------------ flashbags ------------*/
         .alert.alert-success,
         .alert.alert-warning,
-        .alert.alert-danger {
+        .alert.alert-danger,
+        .form-global-errors-container {
             font-size: 1.8em;
             max-width: 960px;
             margin: 3em auto;
@@ -113,6 +114,24 @@
             &.small {max-width: 767px;}
             &.medium {max-width: 960px;}
             &.large {max-width: 1200px;}
+            
+            /*------------ form [global errors] ------------*/
+            .form-global-errors-container {
+                ul {
+                    padding: 1em;
+                    margin: 1em auto;
+                    background: red;
+                    border-radius: 5px;
+                    color: white;
+                    text-align: center;
+                    font-weight: lighter;
+                    border: 2px solid white;
+
+                    li:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
 
             .form-controls {
                 padding: 4em;
@@ -234,25 +253,25 @@
                             height: auto;
                         }
                     }
+
                     
                     // ROW [error]
                     .field-error-container {
                         ul {
                             padding: 1em;
                             margin: 1em auto;
-                            background: rgba(red, .1);
-                            border: 1px solid red;
-                            border-radius: 12px;
-                            font-size: 12px;
-                            display: inline-block;
+                            background: red;
+                            border-radius: 5px;
+                            color: white;
+                            text-align: center;
+                            font-weight: lighter;
+                            border: 2px solid white;
                             width: auto;
+                            display: inline-block;
+                            font-size: 1.4em;
 
                             li:last-child {
                                 margin-bottom: 0;
-                            }
-
-                            * {
-                                color: red;
                             }
                         }
                     }
