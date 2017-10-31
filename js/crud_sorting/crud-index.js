@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {DropdownButton, MenuItem} from 'react-bootstrap';
 
-class CrudIndexSorter extends React.Component {
+export default class CrudIndexSorter extends React.Component {
     render(){
         let json = JSON.parse(document.querySelector('#js-sorting').dataset.options);
         let base_url = json.base_url;
@@ -17,7 +17,3 @@ class CrudIndexSorter extends React.Component {
 
     }
 }
-
-ReactDOM.render(<CrudIndexSorter title='sort by' id='sorting' />, document.querySelector('#js-sorting'));
-
-export default CrudIndexSorter;
