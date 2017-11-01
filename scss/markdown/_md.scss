@@ -1,0 +1,55 @@
+.markdown {
+    /*------------ links ------------*/
+    a { text-decoration: underline; }
+
+    hr {
+        border-top: 1px dotted #8c8b8b;
+    }
+
+    h2, h3, h4, h5, h6 {
+        color: $gray25;
+    }
+
+    ul, ol {
+        padding: 20px;
+        
+        li li { 
+            font-size: 1em;
+            margin-bottom: .85em;
+            &:last-child { margin-bottom: 0; }
+        }
+    }
+
+    ul { list-style: disc outside none; }
+    ol { list-style: decimal outside none; }
+
+    ul ul { list-style: circle outside none; }
+    ul ol { list-style: decimal outside none; }
+    ol ul { list-style: disc outside none; }
+    ol ol { list-style: lower-alpha outside none; }
+
+    ul, ol {
+        ul, ol {
+            &:last-child { padding: 10px 40px 20px; }
+        }
+    }
+
+    blockquote{
+        display:block;
+        background: #fff;
+        padding: 15px 20px 15px 45px;
+        margin: 0 0 20px;
+        position: relative;
+        font-family: Georgia, serif;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #666;
+        text-align: justify;
+        border-left: 15px solid $default-primary-color;
+        border-right: 2px solid $default-primary-color;
+
+        -webkit-box-shadow: 0 8px 18px -12px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0 8px 18px -12px rgba(0, 0, 0, 1);
+        box-shadow: 0 8px 18px -12px rgba(0, 0, 0, 1);
+    }
+}
