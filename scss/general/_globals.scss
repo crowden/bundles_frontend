@@ -36,4 +36,5 @@ button {
 .float-right {float: right;}
 
 /*------------ pages ------------*/
+.admin { font-size: 10px; }
 .admin.page-cms-homepage { @include flex; }
