@@ -22,7 +22,7 @@ export default class MdPopupHelper extends React.Component {
         const md_helper_links = (
           <Popover id="popover-trigger-click-root-close" title="Links">
               <p className="md-help-popover-explanation">A link is composed of text that is linked, the destination of the link, and text that appears when the user hovers over the link.</p>
-              <p className="md-help-popover-example">Here is a link to <span className="highlight">[Google](http://www.google.com "go to Google's homepage!")</span>. Based on the explanation above, a link is <span className="highlight">[the link text](http://www.destination.com "hover text")</span></p>
+              <p className="md-help-popover-example">Here is a link to <span className="highlight">[Google](http://www.google.com "go to Google's homepage!")</span> Based on the explanation above, a link is <span className="highlight">[the link text](http://www.destination.com "hover text")</span> If you wanted to link to a page on this site, the link would appear as <span className="highlight">[the link text](/site-page "hover text")</span></p>
           </Popover>
         );
         const md_helper_subheadings = (
