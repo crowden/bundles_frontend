@@ -37,3 +37,11 @@ button {
 /*------------ pages ------------*/
 .admin { font-size: 10px; }
 .admin.page-cms-homepage { @include flex; }
+
+.page-unpublished-message {
+    background: orange;
+    color: white;
+    padding: 1em;
+    font-size: 14px;
+    text-align: center;
+}
