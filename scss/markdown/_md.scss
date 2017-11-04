@@ -11,7 +11,12 @@
     }
 
     ul, ol {
-        padding: 20px;
+        /* padding: 20px; */
+        margin: 0 4em 1em;
+
+        & > li {
+            margin-bottom: 1em;
+        }
         
         li li { 
             font-size: 1em;
