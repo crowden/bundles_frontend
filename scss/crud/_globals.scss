@@ -160,6 +160,8 @@
                         font-weight: 700;
                         margin-bottom: .5em;
 
+                        &.inline {display: inline-block;}
+
                         // asterisk
                         &.required:before {
                             content: "*";
