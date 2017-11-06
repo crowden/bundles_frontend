@@ -302,11 +302,35 @@
                 }
 
                 /*------------ form [sublabels] ------------*/
+                .js-expand-sublabel {
+                    display: inline-block;
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family: monospace;
+                    background: #007f26;
+                    border-radius: 100%;
+                    text-align: center;
+                    line-height: 1;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    @include flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: .5em;
+
+                    &:link, &:visited, &:hover, &:active {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+
                 div.sublabel, p.sublabel {
                     margin: 1.25em auto;
                 }
 
                 .sublabel {
+                    display: none;
                     margin-top: 1em;
                     font-size: 1.6em;
                     line-height: 1.5em;
