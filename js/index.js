@@ -1,6 +1,6 @@
-import CrudIndexSorter from './crud_sorting/crud-index-sorting';
+import CrudIndexSorter from './crud/crud-index-sorting';
 export {CrudIndexSorter};
-import crud_sublabel_toggle from './crud_sorting/crud-sublabel-toggle';
+import crud_sublabel_toggle from './crud/crud-sublabel-toggle';
 export {crud_sublabel_toggle};
 import MdPopupHelper from './md_help/md-help';
 export {MdPopupHelper};
