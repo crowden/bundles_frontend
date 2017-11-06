@@ -32,6 +32,10 @@ var jUtility = {
         if( s.webkitFlexWrap == '' || s.msFlexWrap == '' || s.flexWrap == '' ) return true;
         return false;
     },
+    domElementExists(element){
+        if ((typeof(element) != 'undefined') && (element != null)) return true;
+        return false;
+    },
     scrollToTarget: function(scrollTargetY, speed, ease){
         // scrollTargetY: the target scrollY property of the window
         // speed: time in pixels per second
@@ -87,4 +91,4 @@ function equalHeights(className) {
 }
 
 
-module.exports = jUtility;
+export {jUtility};
