@@ -1,4 +1,4 @@
-import {jUtility} from './utility/utility';
+import {jUtility} from '../utility/utility';
 import Velocity from 'velocity-animate';
 
 export default function(sublabel_container){
