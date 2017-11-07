@@ -45,3 +45,28 @@ button {
     font-size: 14px;
     text-align: center;
 }
+
+/*------------ javascript toggle triggers ------------*/
+.js-trigger-show-hide {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: monospace;
+    background: #007f26;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 1;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    @include inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5em;
+
+    &:link, &:visited, &:hover, &:active {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.js-toggle-show-hide {display: none;}
