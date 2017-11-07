@@ -1,8 +1,14 @@
 .cms-widgets {
     background: rgba(black, .8);
     padding: 2em;
+    min-height: 560px;
 
     .cms-widget {
+        margin-bottom: 2em;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
         
         .heading {
             color: white;
