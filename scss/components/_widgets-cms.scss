@@ -1,10 +1,11 @@
 .cms-widgets {
     background: rgba(black, .8);
     padding: 2em;
-    min-height: 560px;
+    border-bottom-right-radius: 24px;
 
     .cms-widget {
         margin-bottom: 2em;
+        padding-left: 24px;
         
         &:last-child {
             margin-bottom: 0;
