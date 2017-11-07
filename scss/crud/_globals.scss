@@ -301,12 +301,18 @@
                     }
                 }
 
+                .js-wrapper-show-hide {
+                    .js-toggle-show-hide {
+                        margin: 2em auto;
+                    }
+                }
+
                 div.sublabel, p.sublabel {
-                    margin: 1.25em auto;
+                    margin: 0;
                 }
 
                 .sublabel {
-                    margin-top: 1em;
+                    margin: 0;
                     font-size: 1.6em;
                     line-height: 1.5em;
                     background: rgba(green, .15);
