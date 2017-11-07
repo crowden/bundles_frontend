@@ -7,5 +7,5 @@ export {MdPopupHelper};
 import {jUtility} from './utility/utility';
 export {jUtility};
 
-import ToggleHiddenContainer from './utility/toggle-hidden-container';
+import ToggleHiddenContainer from './utility/toggle-hidden-containers';
 export {ToggleHiddenContainer};
