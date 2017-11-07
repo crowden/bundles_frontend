@@ -5,10 +5,13 @@
 
     .cms-widget {
         margin-bottom: 2em;
-        padding-left: 24px;
         
         &:last-child {
             margin-bottom: 0;
+        }
+
+        .js-toggle-show-hide {
+            padding-left: 24px;
         }
         
         .heading {
