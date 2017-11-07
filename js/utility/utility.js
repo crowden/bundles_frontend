@@ -1,9 +1,11 @@
 const {animation_easing} = require('../animation/easing');
 
-///////////////////////////////////////////
-// shim for window.requestAnimationFrame //
-///////////////////////////////////////////
-window.requestAnimFrame = (function(){
+/////////////////////////////////
+//         BEGIN: shims        //
+/////////////////////////////////
+
+// requestAnimationFrame
+window.requestAnimationFrame = (function(){
     return  window.requestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
     window.mozRequestAnimationFrame ||
@@ -13,9 +15,24 @@ window.requestAnimFrame = (function(){
     };
 })();
 
+// cancelAnimationFrame
 window.cancelAnimationFrame = window.cancelAnimationFrame
     || window.mozCancelAnimationFrame
-    || function(requestID){clearTimeout(requestID)} //fall back
+    || function(requestID){clearTimeout(requestID)}
+
+// array.indexOf
+if (!Array.prototype.indexOf) { 
+    Array.prototype.indexOf = function(obj, start) {
+         for (var i = (start || 0), j = this.length; i < j; i++) {
+             if (this[i] === obj) { return i; }
+         }
+         return -1;
+    }
+}
+
+/////////////////////////////////
+//         END: shims          //
+/////////////////////////////////
 
 var jUtility = {
     addEvent : function (el, eventName, handler) {
@@ -60,7 +77,7 @@ var jUtility = {
             var t = animation_easing[ease](p);
 
             if (p < 1) {
-                requestAnimFrame(tick);
+                requestAnimationFrame(tick);
                 window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t));
             } else {
                 console.log('scroll done');
