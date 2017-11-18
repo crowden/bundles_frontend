@@ -39,6 +39,9 @@ button {
 .admin.page-cms-homepage { 
     @include flex;
     align-items: flex-start;
+
+    .cms-widgets {min-width: 400px;}
+    .ga-widgets {flex: 1;}
 }
 
 .page-unpublished-message {
