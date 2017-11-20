@@ -40,7 +40,7 @@ button {
     @include flex;
     align-items: flex-start;
 
-    .cms-widgets {min-width: 350px;}
+    .cms-widgets {max-width: 350px;}
     .ga-widgets {flex: 1;}
 }
 
