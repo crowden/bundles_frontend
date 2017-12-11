@@ -8,14 +8,22 @@
         }
 
         /*------------ flashbags ------------*/
+        .flashbags-container {
+            margin 3em auto;
+        }
+
         .alert.alert-success,
         .alert.alert-warning,
         .alert.alert-danger,
         .form-global-errors-container {
             font-size: 1.8em;
             max-width: 960px;
-            margin: 3em auto 1em;
+            margin-bottom: 1em;
             line-height: 1.4em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
