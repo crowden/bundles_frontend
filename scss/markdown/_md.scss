@@ -12,8 +12,16 @@
 
     ul, ol {
         /* padding: 20px; */
-        margin: 0 4em 1em;
+        margin: 0 1.5em 1em;
 
+        @include query($responsive-5){
+            margin: 0 2.5em 1em;
+        }
+
+        @include query($responsive-7){
+            margin: 0 4em 1em;
+        }
+        
         & > li {
             margin-bottom: 1em;
         }
@@ -37,7 +45,11 @@
     ul, ol {
         ul, ol {
             margin: 0;
-            &:last-child { padding: 10px 40px; }
+            &:last-child { padding: 10px 20px; }
+
+            @include query($responsive-7){
+                &:last-child { padding: 10px 40px; }
+            }
         }
     }
 
@@ -51,12 +63,16 @@
         font-size: 16px;
         line-height: 1.2;
         color: #666;
-        text-align: justify;
         border-left: 15px solid $default-primary-color;
         border-right: 2px solid $default-primary-color;
+        text-align: left;
 
         -webkit-box-shadow: 0 8px 18px -12px rgba(0, 0, 0, 1);
         -moz-box-shadow: 0 8px 18px -12px rgba(0, 0, 0, 1);
         box-shadow: 0 8px 18px -12px rgba(0, 0, 0, 1);
+        
+        @include query($responsive-5){
+            text-align: justify;
+        }
     }
 }
