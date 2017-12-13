@@ -12,18 +12,22 @@
 
     ul, ol {
         /* padding: 20px; */
-        margin: 0 1.5em 1em;
+        padding: 0 1.5em 1em;
 
         @include query($responsive-5){
-            margin: 0 2.5em 1em;
+            padding: 0 2.5em 1em;
         }
 
         @include query($responsive-7){
-            margin: 0 4em 1em;
+            padding: 0 4em 1em;
         }
         
         & > li {
             margin-bottom: 1em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
         
         li li { 
@@ -57,7 +61,7 @@
         display:block;
         background: #fff;
         padding: 15px 20px 15px 45px;
-        margin: 0 0 20px;
+        margin: 0 0 2em;
         position: relative;
         font-family: Georgia, serif;
         font-size: 16px;
