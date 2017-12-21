@@ -9,3 +9,6 @@ export {jUtility};
 
 import ToggleHiddenContainer from './utility/toggle-hidden-containers';
 export {ToggleHiddenContainer};
+
+import CollectionAddDelete from './utility/collection-add-delete';
+export {CollectionAddDelete};
