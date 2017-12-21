@@ -76,3 +76,43 @@ button {
 }
 
 .js-toggle-show-hide {display: none;}
+
+/*------------ Collections withing forms ------------*/
+.collection-add-delete{
+    .add-container {
+        text-align: right;
+        margin: 1em auto;
+        
+        .add-trigger {
+            display: inline-block;
+            background: $default-primary-color;
+            padding: .75em 1.5em;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    }
+
+    .form-control {
+        display: inline-block;
+        width: 90%;
+    }
+
+    .close {
+        width: 8%;
+        text-align: center;
+        margin: 0 auto;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+
+        &:hover {
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+        }
+
+        .icon {
+            color: red;
+            font-size: 130%;
+        }
+    }
+}
