@@ -101,16 +101,18 @@ var jUtility = {
     ajax: function(options)
     {
         let request = new XMLHttpRequest();
-        let data = 'not set?';
+        let data = null;
+
         
         request.open('GET', options.url, true);
         request.onreadystatechange = function() {
-          if (window.readyState === 4) {
-            if (window.status >= 200 && window.status < 400) {
+            console.log(this);
+          if (this.readyState === 4) {
+            if (this.status >= 200 && this.status < 400) {
               if (options.return_json) {
-                  data = JSON.parse(window.responseText);
+                  data = JSON.parse(this.responseText);
               } else {
-                data = window.responseText ;
+                data = this.responseText ;
               }
             } else {
               data = false;
