@@ -90,8 +90,41 @@ var jUtility = {
     },
     stopDefault: function(event){
         event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+    },
+    /**
+     * @param [object] options
+     *        - [string] url
+     *        - [bool] return_json
+     *
+     * @return [string | false(on error)]
+     */
+    ajax: function(options)
+    {
+        let request = new XMLHttpRequest();
+        let data = null;
+        
+        request.open('GET', options.url, true);
+        request.onreadystatechange = function() {
+          if (window.readyState === 4) {
+            if (window.status >= 200 && window.status < 400) {
+              if (options.return_json) {
+                  data = JSON.parse(window.responseText);
+              } else {
+                data = window.responseText 
+              }
+            } else {
+              data = false;
+            }
+          }
+        };
+
+        request.send();
+        request = null;
+
+        return data;
     }
 }
+
 
 
 function equalHeights(className) {
