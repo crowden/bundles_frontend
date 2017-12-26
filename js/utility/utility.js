@@ -110,7 +110,7 @@ var jUtility = {
               if (options.return_json) {
                   data = JSON.parse(window.responseText);
               } else {
-                data = window.responseText 
+                data = window.responseText ;
               }
             } else {
               data = false;
