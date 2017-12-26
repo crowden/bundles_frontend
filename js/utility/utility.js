@@ -114,11 +114,12 @@ var jUtility = {
                     } else {
                         data = this.responseText ;
                     }
-                    // function to run once data has been retrieved
-                    options.callback(data);
                 } else {
                     data = false;
                 }
+
+                // function to run once data has been retrieved
+                options.caller(data);
             }
         };
 
