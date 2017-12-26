@@ -95,6 +95,7 @@ var jUtility = {
      * @param [object] options
      *        - [string] url
      *        - [bool] return_json
+     *        - [function] callback
      *
      * @return [string | false(on error)]
      */
@@ -106,24 +107,23 @@ var jUtility = {
         
         request.open('GET', options.url, true);
         request.onreadystatechange = function() {
-            console.log(this);
-          if (this.readyState === 4) {
-            if (this.status >= 200 && this.status < 400) {
-              if (options.return_json) {
-                  data = JSON.parse(this.responseText);
-              } else {
-                data = this.responseText ;
-              }
-            } else {
-              data = false;
+            if (this.readyState === 4) {
+                if (this.status >= 200 && this.status < 400) {
+                    if (options.return_json) {
+                        data = JSON.parse(this.responseText);
+                    } else {
+                        data = this.responseText ;
+                    }
+                    // function to run once data has been retrieved
+                    options.callback(data);
+                } else {
+                    data = false;
+                }
             }
-          }
         };
 
         request.send();
         request = null;
-
-        return data;
     }
 }
 
