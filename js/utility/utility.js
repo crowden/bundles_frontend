@@ -101,7 +101,7 @@ var jUtility = {
     ajax: function(options)
     {
         let request = new XMLHttpRequest();
-        let data = null;
+        let data = 'not set?';
         
         request.open('GET', options.url, true);
         request.onreadystatechange = function() {
