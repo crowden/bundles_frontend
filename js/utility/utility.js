@@ -119,7 +119,7 @@ var jUtility = {
                 }
 
                 // function to run once data has been retrieved
-                options.callbackFnc(data);
+                options.callback(data);
             }
         };
 
