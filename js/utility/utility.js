@@ -96,6 +96,7 @@ var jUtility = {
      *        - [string] url
      *        - [bool] return_json
      *        - [function] callback
+     *        - [obj] passed_props
      *
      * @return [string | false(on error)]
      */
@@ -117,8 +118,10 @@ var jUtility = {
                     data = false;
                 }
 
+                let passed_props = (null === options.passed_props) ? null : options.passed_props;
+
                 // function to run once data has been retrieved
-                options.callback(data, options.object);
+                options.callback(data, passed_props);
             }
         };
 
