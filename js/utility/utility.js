@@ -99,8 +99,7 @@ var jUtility = {
      *
      * @return [string | false(on error)]
      */
-    ajax: function(options)
-    {
+    ajax: function(options){
         let request = new XMLHttpRequest();
         let data = null;
 
@@ -125,6 +124,22 @@ var jUtility = {
 
         request.send();
         request = null;
+    },
+    getMonthsArray: function(){
+        return [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        ];
     }
 }
 
