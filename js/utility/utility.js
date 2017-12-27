@@ -118,7 +118,7 @@ var jUtility = {
                 }
 
                 // function to run once data has been retrieved
-                options.callback(data);
+                options.callback(data, options.object);
             }
         };
 
