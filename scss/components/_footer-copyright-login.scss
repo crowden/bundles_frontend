@@ -1,39 +1,57 @@
-/* .copyright {
-    position: relative;
-    padding: 10px 0;
+.copyright {
+    @include query($responsive-7){
+        @include flex;
+    }
+
+    .heading, 
+    .admin-access-links {
+        margin: 0;
+        padding: 1em;
+    }
 
     .heading {
-        text-align: center;
         font-weight: lighter;
-    }
+        text-align: center;
 
-    .admin-home,
-    .log-in-out {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        @include query($responsive-7){
+            text-align: left;
+            @include basis(80%);
+        }
 
-        .fa {
-            font-size: 1.5em;
+        @include query($responsive-7){
+        }
+
+        @include query($responsive-9){
+            @include basis(90%);
         }
     }
 
-    .admin-home,
-    .log-in-out.login {
-        &:link, &:visited, &:hover, &:active {
-            color: $default-primary-color;
+    .admin-access-links {
+        background: black;
+        text-align: center;
+
+        @include query($responsive-7){
+            @include basis(20%);
         }
-    }
 
-    .admin-home { right: 3em; }
+        @include query($responsive-9){
+            @include basis(10%);
+        }
 
-    .log-in-out {
-        right: 1em;
+        .link,
+        .link i {
+            color: white;
 
-        &.logout {
-            &:link, &:visited, &:hover, &:active {
+        }
+
+        .link {
+            font-size: 21px;
+            margin: 0 5px;
+            
+            &.logout i {
                 color: green;
             }
         }
     }
-} */
+
+}
