@@ -64,7 +64,7 @@ var jUtility = {
         scrollTargetY = scrollTargetY || 0;
         speed = speed || 2000;
         ease = ease || 'easeInOutQuint';
-        currentTime = 0;
+        let currentTime = 0;
 
         // min time .1, max time .8 seconds
         var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, .8));
