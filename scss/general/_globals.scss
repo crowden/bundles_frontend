@@ -27,8 +27,10 @@ button {
     background-color:transparent;
 }
 
-.hide-on-mobile {
-    display: none;
+.hide-on-desktop {
+    @include query($responsive-7){
+        display: none;
+    }
 }
 
 .float-left {float: left;}
