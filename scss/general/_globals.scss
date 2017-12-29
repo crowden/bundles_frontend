@@ -33,6 +33,12 @@ button {
     }
 }
 
+.hide-on-mobile {
+    @include query($responsive-7-max){
+        display: none;
+    }
+}
+
 .float-left {float: left;}
 .float-right {float: right;}
 
