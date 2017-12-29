@@ -1,51 +1,4 @@
-let touching_screen = false;
-
-        // toggle test
-        jUtility.addEvent(document.body, 'touchstart', function(){
-            _jRoot.touching_screen = !_jRoot.touching_screen;
-        });
-
-        jUtility.addEvent(document.body, 'touchend', function(){
-            _jRoot.touching_screen = !_jRoot.touching_screen;
-        });
-
-const {animation_easing} = require('../animation/easing');
-
-/////////////////////////////////
-//         BEGIN: shims        //
-/////////////////////////////////
-
-// requestAnimationFrame
-window.requestAnimationFrame = (function(){
-    return  window.requestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.msRequestAnimationFrame ||
-    function(callback){
-        window.setTimeout(callback, 1000 / 60);
-    };
-})();
-
-// cancelAnimationFrame
-window.cancelAnimationFrame = window.cancelAnimationFrame
-    || window.mozCancelAnimationFrame
-    || function(requestID){clearTimeout(requestID)}
-
-// array.indexOf
-if (!Array.prototype.indexOf) { 
-    Array.prototype.indexOf = function(obj, start) {
-         for (var i = (start || 0), j = this.length; i < j; i++) {
-             if (this[i] === obj) { return i; }
-         }
-         return -1;
-    }
-}
-
-/////////////////////////////////
-//         END: shims          //
-/////////////////////////////////
-
-var jUtility = {
+const jUtility = {
     addEvent : function (el, eventName, handler) {
         if (el.addEventListener) {
             el.addEventListener(eventName, handler);
@@ -160,12 +113,50 @@ var jUtility = {
     },
 }
 
-jUtility.addEvent(document.body, 'touchstart', function(){
-    touching_screen = !touching_screen;
-});
+const setEnvironment = function(){
+    /////////////////////////////////////////////////
+    //            catch screen touches             //
+    /////////////////////////////////////////////////
+    let window.touching_screen = false;
+    
+    jUtility.addEvent(document.body, 'touchstart', function(){
+        touching_screen = !touching_screen;
+    });
 
-jUtility.addEvent(document.body, 'touchend', function(){
-    touching_screen = !touching_screen;
-});
+    jUtility.addEvent(document.body, 'touchend', function(){
+        touching_screen = !touching_screen;
+    });
 
-export {jUtility};
+    //////////////////////////////////
+    //            shims             //
+    //////////////////////////////////
+    
+    // requestAnimationFrame
+    window.requestAnimationFrame = (function(){
+        return  window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function(callback){
+            window.setTimeout(callback, 1000 / 60);
+        };
+    })();
+
+    // cancelAnimationFrame
+    window.cancelAnimationFrame = window.cancelAnimationFrame
+        || window.mozCancelAnimationFrame
+        || function(requestID){clearTimeout(requestID)}
+
+    // array.indexOf
+    if (!Array.prototype.indexOf) { 
+        Array.prototype.indexOf = function(obj, start) {
+             for (var i = (start || 0), j = this.length; i < j; i++) {
+                 if (this[i] === obj) { return i; }
+             }
+             return -1;
+        }
+    }
+}
+
+
+export {jUtility, setEnvironment};
