@@ -1,3 +1,14 @@
+let touching_screen = false;
+
+        // toggle test
+        jUtility.addEvent(document.body, 'touchstart', function(){
+            _jRoot.touching_screen = !_jRoot.touching_screen;
+        });
+
+        jUtility.addEvent(document.body, 'touchend', function(){
+            _jRoot.touching_screen = !_jRoot.touching_screen;
+        });
+
 const {animation_easing} = require('../animation/easing');
 
 /////////////////////////////////
@@ -52,41 +63,6 @@ var jUtility = {
     domElementExists(element){
         if ((typeof(element) != 'undefined') && (element != null)) return true;
         return false;
-    },
-    scrollToTarget: function(scrollTargetY, speed, ease){
-        // scrollTargetY: the target scrollY property of the window
-        // speed: time in pixels per second
-        // ease: easing equation to use
-        // 
-        // usage: // scrollToTarget(0, 1500, 'easeInOutQuint');
-        
-        var scrollY = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
-        scrollTargetY = scrollTargetY || 0;
-        speed = speed || 2000;
-        ease = ease || 'easeInOutQuint';
-        let currentTime = 0;
-
-        // min time .1, max time .8 seconds
-        var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, .8));
-
-        // add animation loop
-        function tick() {
-            currentTime += 1 / 60;
-
-            var p = currentTime / time;
-            var t = animation_easing[ease](p);
-
-            if (p < 1) {
-                requestAnimationFrame(tick);
-                window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t));
-            } else {
-                console.log('scroll done');
-                window.scrollTo(0, scrollTargetY);
-            }
-        }
-
-        // call it once to get started
-        tick();
     },
     stopDefault: function(event){
         event.preventDefault ? event.preventDefault() : (event.returnValue = false);
@@ -143,26 +119,53 @@ var jUtility = {
             "November",
             "December"
         ];
-    }
+    },
+    debounce : function(func, wait, immediate) {
+        /** Taken from Underscore.js
+            
+            SUMMARY: 
+            Returns a function, that, as long as it continues to be invoked, will not be triggered. 
+            The function will be called after it stops being called for N milliseconds.
+            If `immediate` is passed, trigger the function on the leading edge, instead of the trailing.
+
+            EXAMPLE:
+            var func_ref = function() {
+                function_with_params(param1, param2);
+            }
+
+            jUtility.debounce(func_ref, 1000, true)
+    
+         */
+
+        var timeout;
+
+        return function() {
+            var context     = this;
+            var args    = arguments;
+            
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            
+            var callNow = immediate && !timeout;
+
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            
+            if (callNow) {
+                func.apply(context, args);
+            }
+        };
+    },
 }
 
+jUtility.addEvent(document.body, 'touchstart', function(){
+    touching_screen = !touching_screen;
+});
 
-
-function equalHeights(className) {
-    var findClass = document.getElementsByClassName(className);
-    var tallest = 0; 
-  // Loop over matching divs
-  for(i = 0; i < findClass.length; i++)
-  {
-    var ele = findClass[i];
-    var eleHeight = ele.offsetHeight;
-    tallest = (eleHeight>tallest ? eleHeight : tallest); /* look up ternary operator if you dont know what this is */
-  }
-  for(i = 0; i < findClass.length; i++)
-  {
-    findClass[i].style.height = tallest + "px";
-  }
-}
-
+jUtility.addEvent(document.body, 'touchend', function(){
+    touching_screen = !touching_screen;
+});
 
 export {jUtility};
