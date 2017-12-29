@@ -117,7 +117,7 @@ const setEnvironment = function(){
     /////////////////////////////////////////////////
     //            catch screen touches             //
     /////////////////////////////////////////////////
-    let window.touching_screen = false;
+    window.touching_screen = false;
     
     jUtility.addEvent(document.body, 'touchstart', function(){
         touching_screen = !touching_screen;
