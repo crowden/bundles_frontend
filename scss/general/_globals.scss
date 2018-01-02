@@ -1,11 +1,12 @@
 html,
 body {
+    height: 100%;
     position: relative;
     font-weight: 400;
     color: $gray25;
 }
 
-html {height: 100%;}
+/* html {height: 100%;}
 
 body {
     min-height: 100%;
@@ -16,7 +17,7 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-}
+} */
 
 a { color: $default-primary-color; }
 
