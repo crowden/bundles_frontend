@@ -13,11 +13,10 @@ button{
 
 /*------------ error message ------------*/
 .login-error-message {
-    background: rgba(red,.2);
+    color: white;
+    background: red;
     font-size: 1.6em;
     padding: 1em;
-    color: red;
-    border: 1px solid red;
     text-align: center;
     margin-bottom: 2em;
 }
