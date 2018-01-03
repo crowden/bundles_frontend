@@ -14,15 +14,12 @@
         text-align: center;
 
         @include query($responsive-7){
-            text-align: left;
-            @include basis(80%);
-        }
-
-        @include query($responsive-7){
+            @include basis(50%);
         }
 
         @include query($responsive-9){
-            @include basis(90%);
+            text-align: left;
+            @include basis($width-66);
         }
     }
 
@@ -31,11 +28,11 @@
         text-align: center;
 
         @include query($responsive-7){
-            @include basis(20%);
+            @include basis(50%);
         }
 
         @include query($responsive-9){
-            @include basis(10%);
+            @include basis($width-33);
         }
 
         .link,
