@@ -17,8 +17,13 @@ export default class CrudAddDelete
 
             // Event Listener: DELETE
             jUtility.addEvent(list, 'click', function(e){
-                /*jUtility.stopDefault(e);*/
-                self.manageDeleteClicks(e);
+                let current_target = e.target || e.srcElement;
+                let allow_event = (current_target.hasAttribute('data-allow-event')) ? 
+                    Number(current_target.getAttribute('data-allow-event')) : 0;
+                
+                if(!allow_event) jUtility.stopDefault(e);
+
+                self.manageDeleteClicks(current_target);
             });
         });
     }
@@ -49,9 +54,7 @@ export default class CrudAddDelete
 
     /*------------ COLLECTION: delete ------------*/
 
-    manageDeleteClicks(e){
-        let current = e.target || e.srcElement;
-
+    manageDeleteClicks(current){
         while (current.parentNode){
             if (current.classList.contains('js-collection-item-delete')){
                 let list_item = current.parentNode; // current <li>
