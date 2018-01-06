@@ -17,7 +17,7 @@ export default class CrudAddDelete
 
             // Event Listener: DELETE
             jUtility.addEvent(list, 'click', function(e){
-                jUtility.stopDefault(e);
+                /*jUtility.stopDefault(e);*/
                 self.manageDeleteClicks(e);
             });
         });
