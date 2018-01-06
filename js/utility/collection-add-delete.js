@@ -34,8 +34,10 @@ export default class CrudAddDelete
 
 
         if (null !== last_child){
-            let form_field = last_child.getElementsByTagName(form_control_type)[0]; // get form field
-            let id_number = form_field.getAttribute('id').match(/(\d+)$/); // numeric part of id
+            // this really just needs to be any form control, even if there are many present.
+            // The will all have the same numerical, unique id.
+            let form_field = last_child.getElementsByTagName(form_control_type)[0];
+            let id_number = form_field.getAttribute('id').match(/(\d+)/); // numeric part of id
             proto_index = Number(id_number[1]) + 1; // the first capture result
         } else {
             proto_index = 0;
