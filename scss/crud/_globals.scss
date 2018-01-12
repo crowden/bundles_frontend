@@ -390,7 +390,9 @@
                     }
 
                     .modification-date-box {
-                        &, & .modificaton-date { text-align: center; }
+                        margin: .25em auto;
+                        
+                        &, & .modification-date { text-align: center; }
                         
                         .modification-date { // input box
                             border: none;
