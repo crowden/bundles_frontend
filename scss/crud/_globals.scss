@@ -388,7 +388,17 @@
                         @include center;
                         display: block;
                     }
+
+                    .modificaton-date-box {
+                        &, & .modificaton-date { text-align: center; }
+                        
+                        .modificaton-date { // input box
+                            border: none;
+                            color: $gray80;
+                        }
+                    }
                 }
+
                 input[type="file"]{
                     position: fixed;
                     top: -1000px;
