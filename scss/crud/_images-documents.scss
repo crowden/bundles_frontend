@@ -87,6 +87,13 @@ form.www-form {
                     }
                 }
             }
+
+            .control-container.no-delete {
+                .file-label {
+                    width: 50%;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 }
