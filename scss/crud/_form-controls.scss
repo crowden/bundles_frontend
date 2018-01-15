@@ -1,0 +1,143 @@
+form.form-action,
+form.www-form {
+    .form-controls {
+        // bottom margin for rows and fieldsets
+        .form-row, fieldset {
+            margin-bottom: 2.5em;
+            &:last-child {margin-bottom: 0;}
+        }
+
+        .form-row {
+            // ROW [error]
+            .field-error-container {
+                ul {
+                    padding: 1em;
+                    margin: 1em auto;
+                    background: red;
+                    border-radius: 5px;
+                    color: white;
+                    text-align: center;
+                    font-weight: lighter;
+                    border: 2px solid white;
+                    width: auto;
+                    display: inline-block;
+                    font-size: 1.4em;
+
+                    li:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            // ROW [label]
+            label {
+                display: block;
+                font-size: 1.8em;
+                font-weight: 700;
+                margin-bottom: .5em;
+
+                // asterisk
+                &.required:before {
+                    content: "*";
+                    color: red;
+                    margin-right: .1em;
+                    line-height: 1em;
+                    display: inline;
+                    vertical-align: top;
+                }
+
+                // inline label
+                &.inline {
+                    display: inline-block;
+                    width: auto;
+                    height: auto;
+                    margin-right: 1em;
+                }
+            }
+
+            // ROW [checkbox-inline]
+            input[type="checkbox"].inline {
+                box-shadow: none;
+                display: inline;
+                width: auto;
+                height: auto;
+                margin-top: 0;
+            }
+
+            // ROW [checkbox-collection]
+            &.checkbox-collection {
+                @include flex;
+
+                .pod {
+                    padding: 1em;
+
+                    input[type="checkbox"] {
+                        display: inline;
+                        width: auto;
+                        height: auto;
+                        margin-top: 0;
+                    }
+
+                    .label {
+                        color: $gray30;
+                        font-size: 1.5em;
+                        padding: 0;
+                        margin-left: .5em;
+                    }
+                }
+            }
+
+            // ROW [date-picker]
+            &.date-picker {
+                @include flex;
+                
+                .pod {
+                    padding: 5px;
+
+                    select {
+                        display: block;
+                        width: 100%;
+                        height: 34px;
+                        padding: 6px 12px;
+                        font-size: 14px;
+                        line-height: 1.428571429;
+                        color: #555555;
+                        background-color: #fff;
+                        background-image: none;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                        -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+                        -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+                        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+                    }
+                }
+            }
+        }
+
+        /*------------ form [fieldsets] ------------*/
+        fieldset {
+            border-radius: 12px;
+            padding: 4.5em 2em 2em;
+            margin-top: 3.5em;
+            background: rgb(255, 255, 255);
+            border: 1px solid $gray70;
+            position: relative;
+
+            legend {
+                display: block;
+                position: absolute;
+                width: auto;
+                font-size: 1.4em;
+                padding: 1em 2em;
+                top: 0;
+                left: 2em;
+                transform: translateY(-50%);
+                background: $gray50;
+                color: rgb(255, 255, 255);
+                border-radius: 12px;
+            }
+        }
+    }
+}

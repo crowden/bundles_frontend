@@ -1,0 +1,55 @@
+form.form-action,
+form.www-form {
+    .form-controls {
+        div.sublabel, p.sublabel { margin: 0; }
+
+        .sublabel {
+            margin: 0;
+            font-size: 1.6em;
+            line-height: 1.5em;
+            background: rgba(green, .15);
+            border: 1px solid rgba(green, .1);
+            padding: 1em;
+            border-radius: 5px;
+
+            &.caution {}
+            &.danger {}
+
+            &.floating {
+                margin: 1em auto;
+                text-align: center;
+                background: rgba($j29-blue, .15);
+                border: 1px solid rgba($j29-blue, .1);
+            }
+
+            & .example {
+                display: inline-block;
+                padding: .2em .4em;
+                margin-bottom: .2em;
+                border: 1px solid white;
+                background: rgba(green, .5);
+                color: white;
+                border-radius: 5px;
+                font-weight: lighter;
+            }
+
+            a { text-decoration: underline; }
+        }
+
+        div.sublabel p { font-size: 1em; }
+
+        /*------------ form [sublabels section header] ------------*/
+        .sublabel.section-header {
+            margin: 0 auto 2em auto;
+            border-left: 2px solid $gray50;
+            border-right: 2px solid $gray50;
+            border-top: none;
+            border-bottom: none;
+            padding: 1em 2em;
+            background: transparent;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}

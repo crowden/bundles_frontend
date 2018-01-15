@@ -1,0 +1,37 @@
+form.form-action,
+form.www-form {
+    .popovers-container {
+        .single-popover {
+            margin-bottom: .5em;
+            
+            button {
+                width: 200px;
+            }
+        }
+    }
+}
+
+#popover-trigger-click-root-close {
+    max-width: 640px;
+    
+    .popover-content {
+        .md-help-popover-explanation {
+            margin-bottom: 1em;
+        }
+
+        .md-help-popover-example {
+            margin-bottom: 0;
+            padding: 1em;
+            border-radius: 3px;
+            border: 2px dotted rgba(black, .33);
+
+            .highlight {
+                background: yellow;
+                border: 1px solid rgba(black, .33);
+                border-radius: 3px;
+                display: inline-block;
+                padding: 3px;
+            }
+        }
+    }
+}

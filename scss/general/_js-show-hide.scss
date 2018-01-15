@@ -1,0 +1,29 @@
+.js-wrapper-show-hide {
+    padding: 1em 0;
+    
+    .js-trigger-show-hide {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: monospace;
+        background: #007f26;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 1;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        @include inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        &:link, &:visited, &:hover, &:active {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    
+    .js-toggle-show-hide {
+        margin: 2em auto;
+        display: none;
+    }
+}

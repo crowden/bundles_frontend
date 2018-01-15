@@ -1,0 +1,82 @@
+.collection-add-delete{
+    .add-container {
+        text-align: right;
+        margin: 1em auto;
+        
+        .add-trigger {
+            display: inline-block;
+            background: $default-primary-color;
+            padding: .75em 1.5em;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    }
+
+    li.dynamic-insert, 
+    .dynamic-insert {
+        @include clearfix;
+        padding: 1.5em 1em;
+        margin-bottom: 0;
+
+        &:nth-child(even){
+            background: rgba($j29-blue, .05);
+        }
+
+        &:hover{
+            background: rgba($j29-blue, .1);
+        }
+        
+        .form-controls-box,
+        .close,
+        .image-preview {
+            float: left;
+        }
+
+        .form-controls-box {width: 90%;}
+        .close {width: 10%;}
+
+        &.single-image {
+            .form-controls-box {width: 60%;}
+            .image-preview { width: 30%; }
+        }
+    }
+
+    .close {
+        text-align: center;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+
+        &:hover {
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+        }
+
+        .icon {
+            color: red;
+            font-size: 130%;
+        }
+    }
+
+    .image-preview {
+        padding: 1em;
+        
+        img {
+            display: block;
+            width: 125px;
+            height: auto;
+            @include center;
+        }
+
+        .modification-date-box {
+            margin: .25em auto;
+            
+            &, & .modification-date { text-align: center; }
+            
+            .modification-date { // input box
+                border: none;
+                color: $gray80;
+            }
+        }
+    }
+}

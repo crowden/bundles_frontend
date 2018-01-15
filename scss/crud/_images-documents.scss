@@ -1,0 +1,92 @@
+form.form-action,
+form.www-form {
+    .form-controls {
+        .file-container {
+            .file-preview-container {
+                img {
+                    max-height: 125px;
+                    width: auto;
+                    max-width: 90%;
+                    @include center;
+                    display: block;
+                }
+
+                .modification-date-box {
+                    margin: .25em auto;
+                    
+                    &, & .modification-date { text-align: center; }
+                    
+                    .modification-date { // input box
+                        border: none;
+                        color: $gray80;
+                    }
+                }
+            }
+
+            input[type="file"]{
+                position: fixed;
+                top: -1000px;
+            }
+
+            .error-container {
+                .field-error-container ul {
+                    padding: 1em;
+                    margin: 1em auto;
+                    background: red;
+                    border-radius: 5px;
+                    color: white;
+                    text-align: center;
+                    font-weight: lighter;
+                    border: 2px solid white;
+                    width: auto;
+                    display: inline-block;
+                    font-size: 1.4em;
+                    margin: 0 0 1em;
+
+                    li {margin-bottom: 0;}
+                }
+            }
+
+            .alt-container {
+                margin-bottom: 1em;
+                
+                label {
+                    width: auto;
+                    height: auto;
+                    margin-right: 1em;
+                    font-size: 1.8em;
+                    font-weight: 700;
+                    margin-bottom: .5em;
+                }
+            }
+
+            .control-container {
+                .file-label,
+                .file-delete-label {
+                    display: inline-block;
+                    width: 97.5%;
+                    text-align: center;
+                    padding: 1em;
+                    border-radius: 14px;
+                    text-align: center;
+                    font-size: 12px;
+                }
+                
+                .file-label {
+                    background: $default-primary-color;
+                    color: white;
+                    margin-right: 2.5%;
+                }
+
+                .file-delete-label {
+                    background: #fcdc6d;
+                    margin-left: 2.5%;
+
+                    input {
+                        margin: 0 5px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

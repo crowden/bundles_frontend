@@ -12,14 +12,21 @@
 @import 'general/dimensions';
 @import 'general/typography';
 @import 'general/globals';
+@import 'general/js-show-hide';
 
 /*------------ components ------------*/
 @import 'components/footer-copyright-login';
 @import 'components/form-login';
 @import 'components/widgets-cms';
 
+/*------------ pages ------------*/
+@import 'pages/admin';
+
 /*------------ mardown ------------*/
 @import 'markdown/md';
 
 /*------------ CRUD ------------*/
 @import 'crud/globals';
+
+/*------------ www forms ------------*/
+@import 'www_forms/www-forms';

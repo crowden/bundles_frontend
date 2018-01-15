@@ -1,0 +1,14 @@
+.page-www-form {
+    form.www-form {
+        .j29-form-code { display : none; }
+
+        .field-error-container {
+            li {font-size: 12px;}
+        }
+
+        input[type="file"]{
+            position: fixed;
+            top: -1000px;
+        }
+    }
+}

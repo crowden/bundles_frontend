@@ -1,0 +1,50 @@
+.admin.page-cms-homepage { 
+    @include flex;
+    align-items: flex-start;
+
+    .cms-widgets {width: 350px;}
+    .ga-widgets {flex: 1;}
+}
+
+.page-unpublished-message {
+    background: orange;
+    color: white;
+    padding: 1em;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4em;
+}
+
+.page-error {
+    .container {padding: 8em 20px;}
+    
+    .error-message-container {
+        position: relative;
+        max-width: 560px;
+        background: white;
+        border: 1px solid $gray50;
+        padding: 60px 2em 2em;
+        border-radius: 12px;
+        text-align: center;
+        margin: 0 auto;
+
+        .logo {
+            width: 100px;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -66%);
+        }
+
+        .title,
+        .subtitle {text-align: center;}
+
+        .btn.btn-default {
+            background: $j29-blue;
+            color: white;
+
+            &:hover {background: rgba($j29-blue, .9);}
+        }
+    }    
+}

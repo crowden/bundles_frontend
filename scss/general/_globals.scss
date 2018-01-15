@@ -6,6 +6,8 @@ body {
     color: $gray25;
 }
 
+.admin { font-size: 10px; }
+
 a { color: $default-primary-color; }
 
 button {
@@ -29,120 +31,3 @@ button {
 
 .float-left {float: left;}
 .float-right {float: right;}
-
-/*------------ pages ------------*/
-.admin { font-size: 10px; }
-.admin.page-cms-homepage { 
-    @include flex;
-    align-items: flex-start;
-
-    .cms-widgets {width: 350px;}
-    .ga-widgets {flex: 1;}
-}
-
-.page-unpublished-message {
-    background: orange;
-    color: white;
-    padding: 1em;
-    font-size: 14px;
-    text-align: center;
-    line-height: 1.4em;
-}
-
-/*------------ javascript toggle triggers ------------*/
-.js-trigger-show-hide {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: monospace;
-    background: #007f26;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 1;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    @include inline-flex;
-    justify-content: center;
-    align-items: center;
-
-    &:link, &:visited, &:hover, &:active {
-        text-decoration: none;
-        color: white;
-    }
-}
-
-.js-toggle-show-hide {display: none;}
-
-/*------------ Collections withing forms ------------*/
-.collection-add-delete{
-    .add-container {
-        text-align: right;
-        margin: 1em auto;
-        
-        .add-trigger {
-            display: inline-block;
-            background: $default-primary-color;
-            padding: .75em 1.5em;
-            color: white;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-    }
-
-    .form-controls-box {
-        display: inline-block;
-        width: 90%;
-    }
-
-    .close {
-        width: 8%;
-        text-align: center;
-        margin: 0 auto;
-        opacity: 0.5;
-        filter: alpha(opacity=50);
-
-        &:hover {
-            opacity: 0.8;
-            filter: alpha(opacity=80);
-        }
-
-        .icon {
-            color: red;
-            font-size: 130%;
-        }
-    }
-}
-
-.page-error {
-    .container {padding: 8em 20px;}
-    
-    .error-message-container {
-        position: relative;
-        max-width: 560px;
-        background: white;
-        border: 1px solid $gray50;
-        padding: 60px 2em 2em;
-        border-radius: 12px;
-        text-align: center;
-        margin: 0 auto;
-
-        .logo {
-            width: 100px;
-            height: auto;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -66%);
-        }
-
-        .title,
-        .subtitle {text-align: center;}
-
-        .btn.btn-default {
-            background: $j29-blue;
-            color: white;
-
-            &:hover {background: rgba($j29-blue, .9);}
-        }
-    }    
-}
