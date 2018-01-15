@@ -90,3 +90,27 @@ form.www-form {
         }
     }
 }
+
+.collection-add-delete {
+    .image-preview {
+        padding: 1em;
+        
+        img {
+            display: block;
+            width: 125px;
+            height: auto;
+            @include center;
+        }
+
+        .modification-date-box {
+            margin: .25em auto;
+            
+            &, & .modification-date { text-align: center; }
+            
+            .modification-date { // input box
+                border: none;
+                color: $gray80;
+            }
+        }
+    }
+}
