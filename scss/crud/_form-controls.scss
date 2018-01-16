@@ -125,6 +125,16 @@ form.www-form {
             border: 1px solid $gray70;
             position: relative;
 
+            fieldset {
+                &:nth-child(odd){
+                    background: rgba($j29-blue, .05);
+                }
+
+                &:hover {
+                 background: rgba($j29-blue, .15);   
+                }
+            }
+
             legend {
                 display: block;
                 position: absolute;
