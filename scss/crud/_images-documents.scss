@@ -60,6 +60,12 @@ form.www-form {
                 }
             }
 
+            &.ff-background-image {
+                .fr-background-position {
+                    margin-bottom: 0;
+                }
+            }
+
             .control-container {
                 .file-label,
                 .file-delete-label {
@@ -119,11 +125,5 @@ form.www-form {
                 color: $gray80;
             }
         }
-    }
-}
-
-.ff-background-image {
-    .fr-background-position {
-        margin-bottom: 5px;
     }
 }
