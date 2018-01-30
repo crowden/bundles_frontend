@@ -64,27 +64,28 @@ form.www-form {
                 margin-top: 0;
             }
 
-            // ROW [checkbox-collection]
-            &.checkbox-collection {
+            // ROW [radio, checkbox collections]
+            &.form-row.radio-linear,
+            &.form-row.checkbox-collection {
                 @include flex;
 
                 .pod {
                     padding: 1em;
-
-                    input[type="checkbox"] {
+                    
+                    input[type="checkbox"],
+                    input[type="radio"] {
                         display: inline;
                         width: auto;
                         height: auto;
                         margin-top: 0;
                     }
 
-                    .label {
+                    .j-label {
                         color: $gray30;
                         font-size: 1.5em;
                         padding: 0;
                         margin-left: .5em;
                     }
-                }
             }
 
             // ROW [date-picker]
