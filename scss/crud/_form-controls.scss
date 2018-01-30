@@ -89,6 +89,20 @@ form.www-form {
                 }
             }
 
+            &.form-row.radio-linear {
+                .pod {
+                    input[type="radio"] {
+                        width: 25px;
+                        height: 25px;
+                        vertical-align: middle;
+                    }
+
+                    .j-label {
+                        font-size: 16px;
+                    }
+                }
+            }
+
             // ROW [date-picker]
             &.date-picker {
                 @include flex;
