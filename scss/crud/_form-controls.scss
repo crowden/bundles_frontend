@@ -64,6 +64,24 @@ form.www-form {
                 margin-top: 0;
             }
 
+            &.floating-checkbox {
+                display: inline-block;
+                width: auto;
+                background: $default-primary-color;
+                padding: 1.5em 2em;
+                border-radius: 12px;
+
+                label.inline {
+                    color: white;
+                    margin-bottom: 0;
+                    font-weight: 100;
+                }
+
+                input[type="checkbox"].inline {
+                    vertical-align: text-top;
+                }
+            }
+
             // ROW [radio, checkbox collections]
             &.form-row.radio-linear,
             &.form-row.checkbox-collection {
