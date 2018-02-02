@@ -67,7 +67,7 @@ form.www-form {
             &.floating-checkbox {
                 display: inline-block;
                 width: auto;
-                background: $default-primary-color;
+                background: rgba($default-primary-color, .3);
                 padding: 1.5em 2em;
                 border-radius: 12px;
 
