@@ -40,6 +40,22 @@
             .form-controls-box {width: 60%;}
             .image-preview { width: 30%; }
         }
+
+        &.single-link {
+            .form-controls-box {
+                @include flex;
+
+                .form-row.link-text {
+                    @include basis($width-33);
+                    padding: 0 5px;
+                }
+
+                .form-row.link {
+                    @include basis($width-66);
+                    padding: 0 5px;
+                }
+            }
+        }
     }
 
     .close {
