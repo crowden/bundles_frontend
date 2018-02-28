@@ -73,8 +73,8 @@ form.www-form {
 
                 &.warning { 
                     background: rgba(red, .3);
-                    color: red;
                     margin: 0 0 2.5em auto;
+                    label { font-weight: lighter; }
                 }
 
                 label.inline {
