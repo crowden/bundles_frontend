@@ -71,6 +71,12 @@ form.www-form {
                 padding: 1.5em 2em;
                 border-radius: 12px;
 
+                &.warning { 
+                    background: rgba(red, .3);
+                    color: red;
+                    margin: 0 0 2.5em auto;
+                }
+
                 label.inline {
                     margin-bottom: 0;
                 }
