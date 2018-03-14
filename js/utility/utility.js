@@ -17,6 +17,11 @@ const jUtility = {
         if ((typeof(element) != 'undefined') && (element != null)) return true;
         return false;
     },
+    emptyNode(node){
+        while (node.firstChild){
+            node.removeChild(node.firstChild);
+        }
+    },
     stopDefault: function(event){
         event.preventDefault ? event.preventDefault() : (event.returnValue = false);
     },
@@ -41,7 +46,7 @@ const jUtility = {
                     if (options.return_json) {
                         data = JSON.parse(this.responseText);
                     } else {
-                        data = this.responseText ;
+                        data = this.responseText;
                     }
                 } else {
                     data = false;
