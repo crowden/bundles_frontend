@@ -1,9 +1,13 @@
+.jbox,
 .container {
-    max-width: 1400px;
     padding-left: 1em;
     padding-right: 1em;
     margin: 0 auto;
 }
+
+.jbox.parent { padding: 0; }
+.container { max-width: 1400px; }
+
 
 $width-33: 33.33333%;
 $width-66: 66.66667%;
@@ -30,3 +34,436 @@ $width-66: 66.66667%;
 .basis90 {@include basis(90%);}
 .basis95 {@include basis(95%);}
 .basis100 {@include basis(100%);}
+
+.jbox5, .mjbox5,
+.jbox10, .mjbox10,
+.jbox15, .mjbox15,
+.jbox20, .mjbox20, .tjbox20,
+.jbox25, .mjbox25, .tjbox25,
+.jbox30, .mjbox30,
+.jbox33, .mjbox33, .tjbox33,
+.jbox35, .mjbox35,
+.jbox40, .mjbox40, .tjbox40,
+.jbox45, .mjbox45,
+.jbox50, .mjbox50, .tjbox50,
+.jbox55, .mjbox55,
+.jbox60, .mjbox60,
+.jbox65, .mjbox65,
+.jbox66, .mjbox66, .tjbox66,
+.jbox70, .mjbox70,
+.jbox75, .mjbox75, .tjbox75,
+.jbox80, .mjbox80,
+.jbox85, .mjbox85,
+.jbox90, .mjbox90,
+.jbox95, .mjbox95,
+.jbox100, .mjbox100, .tjbox100 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+
+/* IE7 zoom
+****************************/
+.jbox5, .mjbox5,
+.jbox10, .mjbox10,
+.jbox15, .mjbox15,
+.jbox20, .mjbox20, .tjbox20,
+.jbox25, .mjbox25, .tjbox25,
+.jbox30, .mjbox30,
+.jbox33, .mjbox33, .tjbox33,
+.jbox35, .mjbox35,
+.jbox40, .mjbox40, .tjbox40,
+.jbox45, .mjbox45,
+.jbox50, .mjbox50, .tjbox50,
+.jbox55, .mjbox55,
+.jbox60, .mjbox60,
+.jbox65, .mjbox65,
+.jbox66, .mjbox66, .tjbox66,
+.jbox70, .mjbox70,
+.jbox75, .mjbox75, .tjbox75,
+.jbox80, .mjbox80,
+.jbox85, .mjbox85,
+.jbox90, .mjbox90,
+.jbox95, .mjbox95,
+.jbox100, .mjbox100, .tjbox100 {
+    *zoom: 1;
+}
+
+/* Clearfix method #1
+****************************/
+
+.jclear {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+/* Clearfix method #2
+****************************/
+.jbox5:before, .mjbox5:before,
+.jbox10:before, .mjbox10:before,
+.jbox15:before, .mjbox15:before,
+.jbox20:before, .mjbox20:before, .tjbox20:before,
+.jbox25:before, .mjbox25:before, .tjbox25:before,
+.jbox30:before, .mjbox30:before,
+.jbox33:before, .mjbox33:before, .tjbox33:before,
+.jbox35:before, .mjbox35:before,
+.jbox40:before, .mjbox40:before, .tjbox40:before,
+.jbox45:before, .mjbox45:before,
+.jbox50:before, .mjbox50:before, .tjbox50:before,
+.jbox55:before, .mjbox55:before,
+.jbox60:before, .mjbox60:before,
+.jbox65:before, .mjbox65:before,
+.jbox66:before, .mjbox66:before, .tjbox66:before,
+.jbox70:before, .mjbox70:before,
+.jbox75:before, .mjbox75:before, .tjbox75:before,
+.jbox80:before, .mjbox80:before,
+.jbox85:before, .mjbox85:before,
+.jbox90:before, .mjbox90:before,
+.jbox95:before, .mjbox95:before,
+.jbox100:before, .mjbox100:before, .tjbox100:before,
+.jbox:before,
+.jbox5:after, .mjbox5:after,
+.jbox10:after, .mjbox10:after,
+.jbox15:after, .mjbox15:after,
+.jbox20:after, .mjbox20:after, .tjbox20:after,
+.jbox25:after, .mjbox25:after, .tjbox25:after,
+.jbox30:after, .mjbox30:after,
+.jbox33:after, .mjbox33:after, .tjbox33:after,
+.jbox35:after, .mjbox35:after,
+.jbox40:after, .mjbox40:after, .tjbox40:after,
+.jbox45:after, .mjbox45:after,
+.jbox50:after, .mjbox50:after, .tjbox50:after,
+.jbox55:after, .mjbox55:after,
+.jbox60:after, .mjbox60:after,
+.jbox65:after, .mjbox65:after,
+.jbox66:after, .mjbox66:after, .tjbox66:after,
+.jbox70:after, .mjbox70:after,
+.jbox75:after, .mjbox75:after, .tjbox75:after,
+.jbox80:after, .mjbox80:after,
+.jbox85:after, .mjbox85:after,
+.jbox90:after, .mjbox90:after,
+.jbox95:after, .mjbox95:after,
+.jbox100:after, .mjbox100:after, .tjbox100:after,
+.jbox:after, {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+/* Clearfix method #3
+****************************/
+.jbox5:after, .mjbox5:after,
+.jbox10:after, .mjbox10:after,
+.jbox15:after, .mjbox15:after,
+.jbox20:after, .mjbox20:after, .tjbox20:after,
+.jbox25:after, .mjbox25:after, .tjbox25:after,
+.jbox30:after, .mjbox30:after,
+.jbox33:after, .mjbox33:after, .tjbox33:after,
+.jbox35:after, .mjbox35:after,
+.jbox40:after, .mjbox40:after, .tjbox40:after,
+.jbox45:after, .mjbox45:after,
+.jbox50:after, .mjbox50:after, .tjbox50:after,
+.jbox55:after, .mjbox55:after,
+.jbox60:after, .mjbox60:after,
+.jbox65:after, .mjbox65:after,
+.jbox66:after, .mjbox66:after, .tjbox66:after,
+.jbox70:after, .mjbox70:after,
+.jbox75:after, .mjbox75:after, .tjbox75:after,
+.jbox80:after, .mjbox80:after,
+.jbox85:after, .mjbox85:after,
+.jbox90:after, .mjbox90:after,
+.jbox95:after, .mjbox95:after,
+.jbox100:after, .mjbox100:after, .tjbox100:after,
+.jbox:after {
+    clear: both;
+}
+
+/* Mobile Box Dimensions
+**************************************/ 
+@include query($responsive-7-max){
+    .mjbox5,
+    .mjbox10,
+    .mjbox15,
+    .mjbox20,
+    .mjbox25,
+    .mjbox30,
+    .mjbox33,
+    .mjbox35,
+    .mjbox40,
+    .mjbox45,
+    .mjbox50,
+    .mjbox55,
+    .mjbox60,
+    .mjbox65,
+    .mjbox66,
+    .mjbox70,
+    .mjbox75,
+    .mjbox80,
+    .mjbox85,
+    .mjbox90,
+    .mjbox95 {
+        float: left;
+        clear: none;
+    }
+
+    .mjbox5 {
+        width: 5%;
+    }
+
+    .mjbox10  {
+        width: 10%;
+    }
+
+    .mjbox15  {
+        width: 15%;
+    }
+
+    .mjbox20  {
+        width: 20%;
+    }
+
+    .mjbox25  {
+        width: 25%;
+    }
+
+    .mjbox30  {
+        width: 30%;
+    }
+
+    .mjbox33  {
+        width: $width-33;
+    }
+
+    .mjbox35  {
+        width: 35%;
+    }
+
+    .mjbox40  {
+        width: 40%;
+    }
+
+    .mjbox45  {
+        width: 45%;
+    }
+
+    .mjbox50  {
+        width: 50%;
+    }
+
+    .mjbox55  {
+        width: 55%;
+    }
+
+    .mjbox60  {
+        width: 60%;
+    }
+
+    .mjbox65  {
+        width: 65%;
+    }
+
+    .mjbox66  {
+        width: $width-66;
+    }
+
+    .mjbox70  {
+        width: 70%;
+    }
+
+    .mjbox75  {
+        width: 75%;
+    }
+
+    .mjbox80  {
+        width: 80%;
+    }
+
+    .mjbox85  {
+        width: 85%;
+    }
+
+    .mjbox90  {
+        width: 90%;
+    }
+
+    .mjbox95  {
+        width: 95%;
+    }
+
+    .mjbox100 {
+        width: 100%;
+        float: none;
+        clear: both;
+    }
+}
+
+/* Tablet Box Dimensions
+**************************************/ 
+@include query($responsive-6){
+    .tjbox20,
+    .tjbox25,
+    .tjbox33,
+    .tjbox40,
+    .tjbox50,
+    .tjbox66,
+    .tjbox75 {
+        float: left;
+        clear: none;
+    }
+
+    .tjbox20  {
+        width: 20%;
+    }
+
+    .tjbox25  {
+        width: 25%;
+    }
+
+    .tjbox33  {
+        width: $width-33;
+    }
+
+    .tjbox40  {
+        width: 40%;
+    }
+
+    .tjbox50  {
+        width: 50%;
+    }
+
+    .tjbox66  {
+        width: $width-66;
+    }
+
+    .tjbox75  {
+        width: 75%;
+    }
+
+    .tjbox100 {
+        width: 100%;
+        float: none;
+        clear: both;
+    }
+}
+
+/* Desktop Box Dimensions
+****************************/
+@include query($responsive-7){
+    .jbox5,
+    .jbox10,
+    .jbox15,
+    .jbox20,
+    .jbox25,
+    .jbox30,
+    .jbox33,
+    .jbox35,
+    .jbox40,
+    .jbox45,
+    .jbox50,
+    .jbox55,
+    .jbox60,
+    .jbox65,
+    .jbox66,
+    .jbox70,
+    .jbox75,
+    .jbox80,
+    .jbox85,
+    .jbox90,
+    .jbox95 {
+        float: left;
+        clear: none;
+    }
+
+    .jbox5 {
+        width: 5%;
+    }
+
+    .jbox10  {
+        width: 10%;
+    }
+
+    .jbox15  {
+        width: 15%;
+    }
+
+    .jbox20  {
+        width: 20%;
+    }
+
+    .jbox25  {
+        width: 25%;
+    }
+
+    .jbox30  {
+        width: 30%;
+    }
+
+    .jbox33  {
+        width: $width-33;
+    }
+
+    .jbox35  {
+        width: 35%;
+    }
+
+    .jbox40  {
+        width: 40%;
+    }
+
+    .jbox45  {
+        width: 45%;
+    }
+
+    .jbox50  {
+        width: 50%;
+    }
+
+    .jbox55  {
+        width: 55%;
+    }
+
+    .jbox60  {
+        width: 60%;
+    }
+
+    .jbox65  {
+        width: 65%;
+    }
+
+    .jbox66  {
+        width: $width-66;
+    }
+
+    .jbox70  {
+        width: 70%;
+    }
+
+    .jbox75  {
+        width: 75%;
+    }
+
+    .jbox80  {
+        width: 80%;
+    }
+
+    .jbox85  {
+        width: 85%;
+    }
+
+    .jbox90  {
+        width: 90%;
+    }
+
+    .jbox95  {
+        width: 95%;
+    }
+
+    .jbox100 {
+        width: 100%;
+        float: none;
+        clear: both;        
+    }
+}

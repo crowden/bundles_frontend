@@ -23,6 +23,12 @@ button {
     }
 }
 
+.hide-on-tablet {
+    @include query($responsive-6){
+        display: none;
+    }
+}
+
 .hide-on-mobile {
     @include query($responsive-7-max){
         display: none;
