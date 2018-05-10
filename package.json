@@ -29,7 +29,6 @@
     "cssnano-cli": "^1.0.5",
     "file-loader": "^1.1.5",
     "font-awesome": "^4.7.0",
-    "node-sass": "^4.5.3",
     "react": "^16.0.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.0.0",
