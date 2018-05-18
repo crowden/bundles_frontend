@@ -42,9 +42,9 @@ export default class MdPopupHelper extends React.Component {
               <p className="md-help-popover-explanation">Lists can be ordered (1., 2., 3., etc.) or unordered with bullets.</p>
               <p className="md-help-popover-example">
                 A bulleted list:
-                <br /><span className="highlight">- </span>Use a hyphen for each bulleted list item
-                <br /><span className="highlight">- </span>Use a hyphen for each bulleted list item
-                <br /><span className="highlight">- </span>Use a hyphen for each bulleted list item
+                <br /><span className="highlight">{'-\xa0'}</span>Use a hyphen for each bulleted list item
+                <br /><span className="highlight">{'-\xa0'}</span>Use a hyphen for each bulleted list item
+                <br /><span className="highlight">{'-\xa0'}</span>Use a hyphen for each bulleted list item
                 <br /><br />
                 An ordered list:
                 <br /><span className="highlight">1. </span>Numbered lists are easy
