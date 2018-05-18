@@ -47,9 +47,9 @@ export default class MdPopupHelper extends React.Component {
                 <br /><span className="highlight">{'-\xa0'}</span>Use a hyphen for each bulleted list item
                 <br /><br />
                 An ordered list:
-                <br /><span className="highlight">1. </span>Numbered lists are easy
-                <br /><span className="highlight">2. </span>Markdown keeps track of the numbers for you
-                <br /><span className="highlight">7. </span>So this will be item 3.
+                <br /><span className="highlight">{'1.\xa0'}</span>Numbered lists are easy
+                <br /><span className="highlight">{'2.\xa0'}</span>Markdown keeps track of the numbers for you
+                <br /><span className="highlight">{'7.\xa0'}</span>So this will be item 3.
               </p>
           </Popover>
         );
@@ -106,3 +106,4 @@ export default class MdPopupHelper extends React.Component {
         );
     }
 }
+
