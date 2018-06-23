@@ -122,6 +122,10 @@ const jUtility = {
 }
 
 const setEnvironment = function(){
+    window.log = function(log){
+        window.console.log(log);
+    }
+    
     /////////////////////////////////////////////////
     //            catch screen touches             //
     /////////////////////////////////////////////////
