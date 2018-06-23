@@ -22,6 +22,9 @@ const jUtility = {
             node.removeChild(node.firstChild);
         }
     },
+    log(what_to_log){
+        console.log(what_to_log);
+    },
     stopDefault: function(event){
         event.preventDefault ? event.preventDefault() : (event.returnValue = false);
     },
